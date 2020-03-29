@@ -1,0 +1,33 @@
+https://github.com/mohannautiyal/April2020.git
+
+1) Right Click and select git bash 
+
+2) git init
+ 
+3) $ git remote add origin https://github.com/mohannautiyal/April2020.git
+
+4) git status
+
+5) git add
+
+6) git commit -m "first commit"
+
+7) git push  <REMOTENAME> <BRANCHNAME> 
+
+git push origin master
+
+Other important commands
+===================================
+1) git restore -- staged <FileName>
+
+2) git remote --v
+List your existing remotes in order to get the name of the remote you want to change.
+
+3) Change your remote's URL from SSH to HTTPS with the git remote set-url command.
+
+$ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+
+
+
+
+
