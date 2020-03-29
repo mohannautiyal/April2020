@@ -29,5 +29,48 @@ $ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 
 
 
+https://career.guru99.com/top-40-interview-questions-on-git/
+
+1)   What is GIT stash?
+
+GIT stash takes the current state of the working directory and index and puts in on the stack for later and gives you back a clean working directory.  So in case if you are in the middle of something and need to jump over to the other job, and at the same time you don’t want to lose your current edits then you can use GIT stash.
+
+2) What is the function of git clone?
+
+The git clone command creates a copy of an existing Git repository.  To get the copy of a central repository, ‘cloning’  is the most common way used by programmers.
+
+3) What is ‘head’ in git and how many heads can be created in a repository?
+
+A ‘head’ is simply a reference to a commit object. In every repository, there is a default head referred as “Master”.  A repository can contain any number of heads
+
+4) What is the purpose of branching in GIT?
+
+The purpose of branching in GIT is that you can create your own branch and jump between those branches. It will allow you to go to your previous work keeping your recent work intact.
+
+5) What is the common branching pattern in GIT?
+
+The common way of creating branch in GIT is to maintain one as “Main“
+
+branch and create another branch to implement new features. This pattern is particularly useful when there are multiple developers working on a single project.
+
+6) How can you bring a new feature in the main branch?
+
+To bring a new feature in the main branch, you can use a command “git merge” or “git pull command”.
+
+7) What is ‘git status’ is used for?
+
+As ‘Git Status’ shows you the difference between the working directory and the index, it is helpful in understanding a git more comprehensively.
+
+8) What is the function of ‘git checkout’ in git?
+
+A ‘git checkout’ command is used to update directories or specific files in your working tree with those from another branch without merging it in the whole branch.
+
+9) What is the use of ‘git log’?
+
+To find specific commits in your project history- by author, date, content or history ‘git log’ is used.
+
+
+
+
 
 
