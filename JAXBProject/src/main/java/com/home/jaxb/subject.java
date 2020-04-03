@@ -1,35 +1,36 @@
-import java.util.List;
+package com.home.jaxb;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import lombok.Data;
 
+
+
 @Data
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Student {
+
+public class subject {
+	
+	@XmlElement
+	String subjectName;
 
 	@XmlElement
-	String Studentname;
-	@XmlElement
-	String rollno;
+	String teacher;
 
-	@XmlElement
-	List<subject> subjects;
-
-	public Student() {
-
-	}
-
-	public Student(String studentname, String rollno, List<subject> subjects) {
+	public subject(String subjectName, String teacher) {
 		super();
-		Studentname = studentname;
-		this.rollno = rollno;
-		this.subjects = subjects;
+		this.subjectName = subjectName;
+		this.teacher = teacher;
 	}
+	
+ 
 
-
+public subject() {
+	 
+ }
 }

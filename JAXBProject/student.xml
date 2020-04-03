@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<student>
+    <Studentname>Name</Studentname>
+    <rollno>1234</rollno>
+    <subjects>
+        <subject>
+            <subjectName>Maths</subjectName>
+            <teacher>Rajesh</teacher>
+        </subject>
+        <subject>
+            <subjectName>English</subjectName>
+            <teacher>Anuj</teacher>
+        </subject>
+        <subject>
+            <subjectName>Science</subjectName>
+            <teacher>Krish</teacher>
+        </subject>
+    </subjects>
+</student>

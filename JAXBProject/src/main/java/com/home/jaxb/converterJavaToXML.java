@@ -1,3 +1,5 @@
+package com.home.jaxb;
+import java.io.File;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,11 +15,15 @@ public class converterJavaToXML {
 		List<subject> sub = new ArrayList<subject>();
 		subject s1 = new subject("Maths","Rajesh");
 		subject s2 = new subject("English","Anuj");
+		subject s3 = new subject("Science","Krish");
+
 		sub.add(s1);
 		sub.add(s2);
+		sub.add(s3);
+
 				
 		Student st = new Student("Name","1234",sub);
-		System.out.println(st);
+	//	System.out.println(st);
 		
 		JAXBContext context = JAXBContext.newInstance(Student.class);
 		Marshaller m = context.createMarshaller();
@@ -31,6 +37,8 @@ public class converterJavaToXML {
 		m.marshal(st, sw);
 		String xmlOut = sw.toString();
 		System.out.println(xmlOut);
+		
+		m.marshal(st, new File("student.xml"));
 
 	}
 
