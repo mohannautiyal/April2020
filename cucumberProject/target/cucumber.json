@@ -1,0 +1,64 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-04-04T17:53:08.648Z",
+        "line": 3,
+        "name": "Addition of two numbers",
+        "description": "",
+        "id": "airthmethic-operations;addition-of-two-numbers",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1765400,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user provides two numbers \"3\" and \"5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"5\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinition.user_provides_two_numbers_and(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 144400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the sum of the two numbers should be \"8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"8\"",
+                  "offset": 37
+                }
+              ],
+              "location": "stepDefinition.the_sum_of_the_two_numbers_should_be(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Airthmethic Operations",
+    "description": "",
+    "id": "airthmethic-operations",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/arithmethicOperations.feature",
+    "tags": []
+  }
+]
