@@ -1,0 +1,41 @@
+What are Hooks in Cucumber?
+Cucumber supports hooks, which are blocks of code that run before or after each scenario. You can define them anywhere in your project or step definition layers, using the methods @Before and @After. Cucumber Hooks allows us to better manage the code workflow and helps us to reduce the code redundancy. We can say that it is an unseen step, which allows us to perform our scenarios or tests.
+
+ 
+
+An important thing to note about the after hook is that even in case of test fail, after hook will execute for sure.
+Method name can be anything, need not to be beforeScenario() or afterScenario(). can also be named as setUp() and tearDown().
+Make sure that the package import statement should be import cucumber.api.java.After; & import cucumber.api.java.Before;
+
+
+====Tagged Hooks in Cucumber ====
+if we have different perquisites for different scenarios. And we need to have different hooks for different scenarios.
+
+Again, Cucumbers has given a feature of Tagged Hooks to solve the above situation where we need to perform different tasks before and after scenarios.
+
+	@Before("@Second")
+    public void beforeSecond(){
+        System.out.println("This will run only before the Second Scenario");
+    }		
+	@Before("@First,@Third")
+    public void beforeFirstAndThird(){
+        System.out.println("This will run before both First & Third Scenario");
+    }
+
+	@After("@First")
+    public void afterFirst(){
+        System.out.println("This will run only after the First Scenario");   
+    }		
+	@After("@Second")
+    public void afterSecond(){
+        System.out.println("This will run only after the Second Scenario");   
+    }		
+
+
+Common Tagged Hooks for Multiple Scenarios
+We can have common tagged hooks for multiple scenarios as well. In the below example, I just combined the @Before(“First”) and @Before(“Third”) by @Before(“@First, @Third”). 
+
+
+========================================================
+Background in Cucumber is used to define a step or series of steps that are common to all the tests in the feature file. It allows you to add some context to the scenarios for a feature where it is defined. A Background is much like a scenario containing a number of steps. But it runs before each and every scenario were for a feature in which it is defined.
+

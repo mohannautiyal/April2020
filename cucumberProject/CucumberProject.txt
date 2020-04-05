@@ -1,0 +1,49 @@
+Structure Cucumber Project
+
+1) Step defintion files under src/main/java
+2) Test Runner file under src/test/java
+
+@CucumberOptions(features = "./src/test/resources/Features", 
+                 glue = "com.home",
+               //  plugin= {"pretty","json:target/Cucumber.json","html:target/cucumber-jvm-reports"}
+
+plugin= {"json:target/cucumber.json"}
+tags ={"@SmokeTest"}
+
+tags={"@SmokeTest,@RegressionTest"} Execute all tests tagged as @SmokeTest OR @RegressionTest
+tags={"@SmokeTest","@RegressionTest"} Execute all tests tagged as @SmokeTest AND @RegressionTest
+tags={"@FunctionalTest","~@SmokeTest"} Execute all tests of the feature tagged as @FunctionalTests but skip scenarios tagged as @SmokeTest 
+
+
+
+3) Plugin to generate cucumber report
+		<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<!-- <version>2.8.0</version> -->
+				<version>2.8.0</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>Cucumber Project</projectName>
+							<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+							<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
+
+4) Overriding Cucumber Options
+
+If you want to run the test cases associated to Tags, this is how we specify :
+ mvn test -Dcucumber.options=”–tags @tag Name”
+
+ mvn test –DCucumber.options=”Your Options”
+
