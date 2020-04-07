@@ -1,0 +1,17 @@
+Passing data between steps in Cucumber
+
+Dependency required is cucumber-picocontainer
+To share state between steps in a scenario. We need a constructor that requres an object that PicoContainter can creat and inject.
+
+PicoContainer doesn’t require any configuration
+PicoContainer doesn’t require your classes to use any APIs such as the horrible @Inject – just use constructors
+PicoContainer really only has a single feature – it instantiates objects
+Simply hand it some classes and it will instantiate each one, correctly wired together via their constructors. That’s it. Cucumber scans your classes with step definitions in them, passes them to PicoContainer, then asks it to create new instances for every scenario.
+
+How to Sharing Test Context between Cucumber Step Definitions using PicoContainer
+We will be performing below steps to share data state across steps:
+
+Add PicoContainer to the Project
+Create a Test Context class which will hold all the objects state
+Divide the Steps class into multiple steps classes with logical separation
+Write Constructor to share Test Context

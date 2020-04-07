@@ -33,9 +33,16 @@ Again, Cucumbers has given a feature of Tagged Hooks to solve the above situatio
 
 
 Common Tagged Hooks for Multiple Scenarios
-We can have common tagged hooks for multiple scenarios as well. In the below example, I just combined the @Before(“First”) and @Before(“Third”) by @Before(“@First, @Third”). 
+We can have common tagged hooks for multiple scenarios as well. In the below example, I just combined the @Before(â€œFirstâ€�) and @Before(â€œThirdâ€�) by @Before(â€œ@First, @Thirdâ€�). 
 
 
 ========================================================
 Background in Cucumber is used to define a step or series of steps that are common to all the tests in the feature file. It allows you to add some context to the scenarios for a feature where it is defined. A Background is much like a scenario containing a number of steps. But it runs before each and every scenario were for a feature in which it is defined.
 
+
+
+
+=====
+
+Running from command line
+mvn test -Dcucumber.options="--tags @subs"
