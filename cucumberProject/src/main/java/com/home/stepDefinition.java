@@ -9,6 +9,15 @@ import io.cucumber.java.en.Then;
 
 public class stepDefinition {
 	
+	public context ctx;
+	
+	
+	
+	public stepDefinition(context ctx) {
+		super();
+		this.ctx = ctx;
+	}
+
 	int num1,num2;
 	
 	@Before
@@ -47,11 +56,18 @@ public class stepDefinition {
 	@Then("the sum of the two numbers should be {int}")
 	public void the_sum_of_the_two_numbers_should_be(int sum) {
 		
-	    System.out.println("Sum is shown here");
+	   System.out.println("Calculating sum ");
+	    ctx.setSum(sum);
 
 		assertTrue("Sum is incorrect", sum == (num1 + num2));
 		
 		
+	}
+	
+	@Then("display the sum on the screen")
+	public void display_the_sum_on_the_screen() {
+	   System.out.println("Sum is " + ctx.getSum());
+	   ;
 	}
 
 }

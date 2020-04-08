@@ -1,7 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: com.home.runner.cucumberTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.569 sec <<< FAILURE! - in com.home.runner.cucumberTest
-Addition of two numbers(Airthmethic Operations)  Time elapsed: 0.037 sec  <<< FAILURE!
-java.lang.AssertionError: Sum is incorrect
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.657 sec <<< FAILURE! - in com.home.runner.cucumberTest
+Addition of two numbers(Airthmethic Operations)  Time elapsed: 0.03 sec  <<< ERROR!
+cucumber.runtime.CucumberException: class com.home.stepDefinition doesn't have an empty constructor. If you need DI, put cucumber-picocontainer on the classpath
+Caused by: java.lang.NoSuchMethodException: com.home.stepDefinition.<init>()
+
+Addition of two numbers(Airthmethic Operations)  Time elapsed: 0.032 sec  <<< ERROR!
+cucumber.runtime.CucumberException: class com.home.stepDefinition doesn't have an empty constructor. If you need DI, put cucumber-picocontainer on the classpath
+Caused by: java.lang.NoSuchMethodException: com.home.stepDefinition.<init>()
+
+Substraction of two numbers(Airthmethic Operations)  Time elapsed: 0.005 sec  <<< ERROR!
+cucumber.runtime.CucumberException: class com.home.stepDefinition doesn't have an empty constructor. If you need DI, put cucumber-picocontainer on the classpath
+Caused by: java.lang.NoSuchMethodException: com.home.stepDefinition.<init>()
+
+Substraction of two numbers(Airthmethic Operations)  Time elapsed: 0.006 sec  <<< ERROR!
+cucumber.runtime.CucumberException: class com.home.stepDefinition doesn't have an empty constructor. If you need DI, put cucumber-picocontainer on the classpath
+Caused by: java.lang.NoSuchMethodException: com.home.stepDefinition.<init>()
 

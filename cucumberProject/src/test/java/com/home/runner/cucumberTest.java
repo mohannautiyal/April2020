@@ -10,7 +10,8 @@ import io.cucumber.junit.CucumberOptions;
                  glue = "com.home",
                //  plugin= {"pretty","json:target/Cucumber.json","html:target/cucumber-jvm-reports"}
 
-plugin= {"json:target/cucumber.json"}
+plugin= {"json:target/cucumber.json"},
+dryRun = false
 
 		)
 public class cucumberTest {
