@@ -34,7 +34,7 @@ public class LoginTest extends TestBase {
 		   testReporter =extent.createTest("Verify Login functionality");
             LoginPage =   HomePage.navigateToLoginPage();
             testReporter.log(Status.PASS, "Navigated to Login Page");
-    		extent.flush();
+    		//extent.flush();
 
 	  }
 	  
@@ -48,7 +48,7 @@ public class LoginTest extends TestBase {
 		System.out.println("Page Banner text "+PageBanner );
 		assertTrue(PageBanner.equals("free crm home"));
 		testReporter.log(Status.PASS, "Login Page Banner Verified");
-		extent.flush();
+	//	extent.flush();
 
 	}
 	

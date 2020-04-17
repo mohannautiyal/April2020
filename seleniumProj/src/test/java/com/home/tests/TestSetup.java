@@ -1,5 +1,6 @@
 package com.home.tests;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -17,5 +18,11 @@ public class TestSetup extends TestBase {
 		extent.attachReporter(htmlReporter);
 		
 	}	
+	
+	
+	@AfterTest
+	public void FlushReport() {
+		extent.flush();
+	}
 
 }
