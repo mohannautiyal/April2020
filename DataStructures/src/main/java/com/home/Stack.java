@@ -50,6 +50,19 @@ public class Stack {
 			System.out.println("Stack is Empty");
 	}
 
+	
+	public int Peek() {
+		if(!isEmpty()) {
+		System.out.println("Peek method returned " + arr[top]);	
+		return arr[top];
+		}
+		else {
+	    System.out.println("Stack is empty");
+		return 0;}
+	}
+	
+	
+	
 	// runner method to check stack methods
 	public static void main(String[] args) {
 		Stack stack = new Stack(3);
@@ -64,13 +77,14 @@ public class Stack {
 		stack.push(6);
 		System.out.println("Is the Stack Full > " + stack.isFull());
 		System.out.println("======================================");
+        stack.Peek();
 
 		stack.pop();
 		stack.push(30);
 		stack.pop();
 		stack.pop();
-		stack.pop();
 
+		stack.pop();
 		stack.pop();
 
 	}
